@@ -1,5 +1,5 @@
 import cv2
-
+import sklearn.svm as svm
 def detect(image ,cascade):
     rects = cascade.detectMultiScale(image,scaleFactor=1.3,
                                      minNeighbors=5, minSize=(30, 30), flags = cv2.CASCADE_SCALE_IMAGE)
@@ -32,7 +32,7 @@ while True:
     # 直方图均衡处理
     gray = cv2.equalizeHist(gray)
 
-    # 脸部特征分类地址，里面还有其他
+    # 脸部特征分类地址，里面还有其他E:\\face_detect\\haarcascade_frontalface_default.xml  ，haarcascade_frontalface_alt.xml
     cascade_fn = 'E:/opencv/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml'
 
     # 读取分类器,CascadeClassifier下面有一个detectMultiScale方法来得到矩形
@@ -51,7 +51,7 @@ while True:
 
     #cv2.waitKey(0)
     key = cv2.waitKey(1)
-    cv2.destroyAllWindows()
+    #cv2.destroyAllWindows()
     num = num + 1
     if key == ord('q'):
         break

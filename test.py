@@ -3,6 +3,7 @@ import numpy as np
 import PIL as Image
 
 
+
 def readImage(imagePath):
     image = cv2.imread(imagePath)
     return image
