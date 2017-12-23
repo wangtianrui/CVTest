@@ -27,7 +27,7 @@ while True:
     #cv2.imshow('vedio', img)
 
     #cv2.imwrite('%s.jpg' % (str(num)), img)
-    # 转换为灰度图
+    # 图像转换为灰度图
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # 直方图均衡处理
     gray = cv2.equalizeHist(gray)
