@@ -19,7 +19,7 @@ video = cv2.VideoWriter("VideoTest.avi", cv2.CAP_PROP_FOURCC, 30, size)
 
 print(capture.isOpened())
 
-num = 0
+num = 0#
 
 while True:
     ret, img = capture.read()
